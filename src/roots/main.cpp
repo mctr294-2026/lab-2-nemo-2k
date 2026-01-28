@@ -3,6 +3,12 @@
 
 #include "roots.hpp"
 
+// double poly1(double x)
+// {
+//     // initial bracket [-200, 300]
+//     return x * x - 4;
+// }
+
 double poly1(double x)
 {
     // initial bracket [-200, 300]
@@ -64,8 +70,9 @@ int main(int argc, char **argv)
         std::cout << "Newton-Raphson: failed" << std::endl;
     }
 
-    if (secant(poly1, -200.0, 300.0, -1.0, &root))
+    if (/*secant(poly1, 0.0, 3.0, 1.0, &root)*/secant(poly1, -200.0, 300.0, -1.0, &root))
     {
+        
         std::cout << "Secant: root = " << root << ", poly1(root) = " << poly1(root) << std::endl;
     }
     else
@@ -116,3 +123,4 @@ int main(int argc, char **argv)
 
     return 0;
 }
+ 
